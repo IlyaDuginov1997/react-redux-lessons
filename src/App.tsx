@@ -73,28 +73,28 @@ function App() {
             <OnOff setOnButton={setOnButton} onButton={onButton}/>
 
             <UnconrolledAccordion title={'Menu'}/>
-            +++++
-            <Accordion title={'Menu'}
-                       collapsed={accordionValue}
-                       onClick={() => {
-                           setAccordionValue(!accordionValue)
-                       }}
-                       items={items}
-                       onClickItem={clickOnButton}
-                // можно было так записать
-                // onClickItem={ (name) => alert(name) }
-            />
+            {/*+++++*/}
+            {/*<Accordion title={'Menu'}*/}
+            {/*           collapsed={accordionValue}*/}
+            {/*           onClick={() => {*/}
+            {/*               setAccordionValue(!accordionValue)*/}
+            {/*           }}*/}
+            {/*           items={items}*/}
+            {/*           onClickItem={clickOnButton}*/}
+            {/*    // можно было так записать*/}
+            {/*    // onClickItem={ (name) => alert(name) }*/}
+            {/*/>*/}
 
-            <UncontrolledRating/>
-            +++++
-            <Rating value={ratingValue} onClick={setRatingValue}/>
-            +++++
-            <Select selectItems={selectItems}
-                    changeSelect={changeSelect}
-                    selected={selected}
-                    changeTitle={changeTitle}
-                    title={titleForSelect}
-            />
+            {/*<UncontrolledRating/>*/}
+            {/*+++++*/}
+            {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
+            {/*+++++*/}
+            {/*<Select selectItems={selectItems}*/}
+            {/*        changeSelect={changeSelect}*/}
+            {/*        selected={selected}*/}
+            {/*        changeTitle={changeTitle}*/}
+            {/*        title={titleForSelect}*/}
+            {/*/>*/}
         </div>
     );
 }
