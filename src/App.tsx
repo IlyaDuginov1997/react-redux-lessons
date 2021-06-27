@@ -8,6 +8,7 @@ import {UnconrolledAccordion} from './Components/UncontroledAccordion/Unconroled
 import {OnOff} from './Components/OnOff/OnOff';
 import {v1} from 'uuid';
 import {Select} from './Components/Select/Select';
+import {ReactMemoExample} from './Components/ReactMemoExample';
 
 
 export type ItemsObjType = {
@@ -48,7 +49,6 @@ function App() {
     }
 
     function changeTitle(title: string) {
-        debugger
         setTitleForSelect(title)
         setSelected(!selected)
     }
@@ -73,6 +73,7 @@ function App() {
             <OnOff setOnButton={setOnButton} onButton={onButton}/>
 
             <UnconrolledAccordion title={'Menu'}/>
+
             {/*+++++*/}
             {/*<Accordion title={'Menu'}*/}
             {/*           collapsed={accordionValue}*/}
@@ -89,12 +90,14 @@ function App() {
             {/*+++++*/}
             {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
             {/*+++++*/}
-            {/*<Select selectItems={selectItems}*/}
-            {/*        changeSelect={changeSelect}*/}
-            {/*        selected={selected}*/}
-            {/*        changeTitle={changeTitle}*/}
-            {/*        title={titleForSelect}*/}
-            {/*/>*/}
+            <Select selectItems={selectItems}
+                    changeSelect={changeSelect}
+                    selected={selected}
+                    changeTitle={changeTitle}
+                    title={titleForSelect}
+            />
+            <ReactMemoExample />
+
         </div>
     );
 }
