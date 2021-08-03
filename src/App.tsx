@@ -9,6 +9,9 @@ import {OnOff} from './Components/OnOff/OnOff';
 import {v1} from 'uuid';
 import {Select} from './Components/Select/Select';
 import {ReactMemoExample} from './Components/ReactMemoExample';
+import {UseMemoExample} from './Components/UseMemoExample';
+import {UseMemoExampleCounter} from './Components/UseMemoExampleCounter';
+import {FancyState} from './Components/FancyState';
 
 
 export type ItemsObjType = {
@@ -66,13 +69,13 @@ function App() {
             {/*<UncontrolledRating value={4}/>*/}
             {/*<UncontrolledRating value={5}/>*/}
 
-            <UncontrolledOnOff/>
-            <UncontrolledOnOff/>
+            {/*<UncontrolledOnOff/>*/}
+            {/*<UncontrolledOnOff/>*/}
             +++++
-            <OnOff setOnButton={setOnButton} onButton={onButton}/>
-            <OnOff setOnButton={setOnButton} onButton={onButton}/>
+            {/*<OnOff setOnButton={setOnButton} onButton={onButton}/>*/}
+            {/*<OnOff setOnButton={setOnButton} onButton={onButton}/>*/}
 
-            <UnconrolledAccordion title={'Menu'}/>
+            {/*<UnconrolledAccordion title={'Menu'}/>*/}
 
             {/*+++++*/}
             {/*<Accordion title={'Menu'}*/}
@@ -90,14 +93,16 @@ function App() {
             {/*+++++*/}
             {/*<Rating value={ratingValue} onClick={setRatingValue}/>*/}
             {/*+++++*/}
-            <Select selectItems={selectItems}
-                    changeSelect={changeSelect}
-                    selected={selected}
-                    changeTitle={changeTitle}
-                    title={titleForSelect}
-            />
-            <ReactMemoExample />
-
+            {/*<Select selectItems={selectItems}*/}
+            {/*        changeSelect={changeSelect}*/}
+            {/*        selected={selected}*/}
+            {/*        changeTitle={changeTitle}*/}
+            {/*        title={titleForSelect}*/}
+            {/*/>*/}
+            {/*<ReactMemoExample/>*/}
+            {/*<UseMemoExample/>*/}
+            {/*<UseMemoExampleCounter/>*/}
+            <FancyState/>
         </div>
     );
 }

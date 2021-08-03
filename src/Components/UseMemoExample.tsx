@@ -1,6 +1,6 @@
-import React, {useState} from 'react';
+import React, {useMemo, useState} from 'react';
 
-export const ReactMemoExample = () => {
+export const UseMemoExample = () => {
 
     let [counter, setCounter] = useState<number>(0);
     let [users, setUsers] = useState<Array<string>>(['Ilya', 'Gleb', 'Anton', 'Nastya']);
@@ -9,17 +9,23 @@ export const ReactMemoExample = () => {
         setCounter(counter + 1)
     }
 
+
+
     const addUser = () => {
         const newUser = [...users, 'Kostya']
         setUsers(newUser)
     }
+
+    const newArray = useMemo( () => {
+        return users.filter(u => u.toLowerCase().indexOf('a') > -1)
+    }, [users] )
 
     return (
         <div>
             <button onClick={incCounter}>inc</button>
             <button onClick={addUser}>addUser</button>
             <Counter counter={counter}/>
-            <Users users={users}/>
+            <Users users={newArray}/>
         </div>
     )
 }
