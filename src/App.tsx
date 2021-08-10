@@ -13,6 +13,8 @@ import {UseMemoExample} from './Components/UseMemoExample';
 import {UseMemoExampleCounter} from './Components/UseMemoExampleCounter';
 import {FancyState} from './Components/FancyState';
 import {UseEffectExample} from './Components/UseEffectExample';
+import {UseEffectTimes} from './Components/UseEffectTimes';
+import {UseEffectTimesEample} from './Components/UseEffectTimesExample';
 
 
 export type ItemsObjType = {
@@ -104,7 +106,9 @@ function App() {
             {/*<UseMemoExample/>*/}
             {/*<UseMemoExampleCounter/>*/}
             {/*<FancyState/>*/}
-            <UseEffectExample/>
+            {/*<UseEffectExample/>*/}
+            <UseEffectTimes />
+            {/*<UseEffectTimesEample />*/}
         </div>
     );
 }
