@@ -13,10 +13,11 @@ import {UseMemoExample} from './Components/UseMemoExample';
 import {UseMemoExampleCounter} from './Components/UseMemoExampleCounter';
 import {FancyState} from './Components/FancyState';
 import {UseEffectExample} from './Components/UseEffectExample';
-import {UseEffectTimes} from './Components/UseEffectTimes';
+import {UseEffectClock} from './Components/UseEffectClock';
 import {UseEffectTimesEample} from './Components/UseEffectTimesExample';
+import {UseEffectClock2} from './Components/UseEffectClock2';
 
-
+// for test new branch
 export type ItemsObjType = {
     id: string,
     title: string
@@ -27,6 +28,10 @@ function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(0);
     let [accordionValue, setAccordionValue] = useState<boolean>(true);
     let [onButton, setOnButton] = useState<boolean>(true);
+
+    const changeModeOnOff = (mode: boolean) => {
+        setOnButton(mode)
+    }
 
     let [selected, setSelected] = useState<boolean>(false)
     let [titleForSelect, setTitleForSelect] = useState<string>('Cities')
@@ -75,7 +80,7 @@ function App() {
             {/*<UncontrolledOnOff/>*/}
             {/*<UncontrolledOnOff/>*/}
             +++++
-            {/*<OnOff setOnButton={setOnButton} onButton={onButton}/>*/}
+            <OnOff changeModeOnOff={changeModeOnOff} onButton={onButton}/>
             {/*<OnOff setOnButton={setOnButton} onButton={onButton}/>*/}
 
             {/*<UnconrolledAccordion title={'Menu'}/>*/}
@@ -107,8 +112,11 @@ function App() {
             {/*<UseMemoExampleCounter/>*/}
             {/*<FancyState/>*/}
             {/*<UseEffectExample/>*/}
-            <UseEffectTimes />
             {/*<UseEffectTimesEample />*/}
+
+            {/*<UseEffectClock />*/}
+            <UseEffectClock2 />
+
         </div>
     );
 }

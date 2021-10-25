@@ -1,7 +1,7 @@
 import React from 'react';
 
 type OnOffType = {
-    setOnButton: (value: boolean) => void
+    changeModeOnOff: (mode: boolean) => void
     onButton: boolean
 }
 
@@ -38,12 +38,12 @@ export function OnOff(props: OnOffType) {
 
     return (
         <div>
-            <div style={onStyle} onClick={() => {
-                props.setOnButton(true)
+            <div style={onStyle} onClick={(e) => {
+                props.changeModeOnOff(true)
             }}>On
             </div>
-            <div style={offStyle} onClick={() => {
-                props.setOnButton(false)
+            <div style={offStyle} onClick={(e) => {
+                props.changeModeOnOff(false)
             }}>Off
             </div>
             <div style={indicatorStyle}></div>

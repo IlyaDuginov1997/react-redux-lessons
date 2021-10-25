@@ -1,11 +1,13 @@
 import React, {useEffect, useState} from 'react';
 
-let a = new Date
+let a = new Date()
 let hoursNow = a.getHours()
 let minutesNow = a.getMinutes()
 let secondsNow = a.getSeconds()
 
-export const UseEffectTimes = () => {
+console.log(a)
+
+export const UseEffectClock = () => {
 
     let [hours, setHours] = useState<number>(hoursNow)
     let [minutes, setMinutes] = useState<number>(minutesNow)
@@ -30,7 +32,6 @@ export const UseEffectTimes = () => {
 
     useEffect(() => {
         setInterval(() => {
-            debugger
             setSeconds((state) => state + 1)
         }, 1000)
         if (seconds === 60) {
